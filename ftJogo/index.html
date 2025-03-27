@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+    <title>Ver Jogos</title>
+  </head>
+  <body>
+    <section class="addGame">
+      <h3>Adicionar Jogo</h3>
+      <form id="gameForm">
+        <label for="gameName">Nome do Jogo</label>
+        <input
+          type="text"
+          name="gameName"
+          id="gameName"
+          placeholder="Introduzir nome do Jogo..."
+          required
+        />
+        <label for="releaseYear">Ano de Lançamento</label>
+        <input
+          type="number"
+          name="releaseYear"
+          id="releaseYear"
+          placeholder="Introduzir ano de Lançamento"
+          required
+        />
+        <label for="gender">Género</label>
+        <input
+          type="text"
+          name="gender"
+          id="gender"
+          placeholder="Introduzir género.."
+          required
+        />
+        <label for="platform">Plataforma</label>
+        <select id="platform" name="platform" multiple required>
+          <option value="pc">PC</option>
+          <option value="ps5">PS5</option>
+          <option value="xbox">Xbox</option>
+        </select>
+        <label for="rating">Avaliação (0-10)</label>
+        <input
+          type="number"
+          min="0"
+          max="10"
+          name="rating"
+          id="rating"
+          placeholder="Avaliação (1-10)..."
+        />
+        <button class="submit-btn" type="submit">Submit</button>
+      </form>
+    </section>
+
+    <section class="loadGames">
+      <h3>Jogos Disponíveis</h3>
+      <div class="mostrarJogos">
+        <table id="table">
+          <thead>
+            <tr>
+              <th>Nome do Jogo</th>
+              <th>Ano de Laçamento</th>
+              <th>Género</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="table-body"></tbody>
+        </table>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
